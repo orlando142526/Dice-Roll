@@ -23,21 +23,24 @@ import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-
+  //contenedor de imagen
     lateinit var diceImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        //para crear un evento
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
+        //Aqui puedes indicarle a que directorio quieres ir, creas y vas al layout que tu le digas
+        setContentView(R.layout.activity_orlando)
+        //contenedor de button
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener {
             rollDice()
         }
-
-        diceImage = findViewById(R.id.dice_image)
+      //Con el R.id cambiamos la imagen que indicamos en el layout
+        //contenedor imagen
+        diceImage = findViewById(R.id.mi_image)
     }
-
+ //genera los números aleatoriamente
     private fun rollDice() {
         val randomInt = Random().nextInt(6) + 1
         val drawableResource = when (randomInt) {
@@ -48,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-
+     //podemos cambiar la imagen
         diceImage.setImageResource(drawableResource)
     }
 }

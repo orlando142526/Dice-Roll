@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         //para crear un evento
         super.onCreate(savedInstanceState)
         //Aqui puedes indicarle a que directorio quieres ir, creas y vas al layout que tu le digas
-        setContentView(R.layout.activity_orlando)
+        setContentView(R.layout.activity_main)
         //contenedor de button
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener {
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         }
       //Con el R.id cambiamos la imagen que indicamos en el layout
         //contenedor imagen
-        diceImage = findViewById(R.id.mi_image)
+        diceImage = findViewById(R.id.dice_image)
     }
  //genera los números aleatoriamente
     private fun rollDice() {
@@ -46,12 +46,14 @@ class MainActivity : AppCompatActivity() {
         val drawableResource = when (randomInt) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
-            3 -> R.drawable.dice_3
-            4 -> R.drawable.dice_4
-            5 -> R.drawable.dice_5
-            else -> R.drawable.dice_6
+            3 -> R.drawable.libros
+            4 -> R.drawable.insta
+            5 -> R.drawable.github
+            else -> R.drawable.paisaje
         }
-     //podemos cambiar la imagen
-        diceImage.setImageResource(drawableResource)
+     //podemos cambiar la imagen cuando tiramos el dado.
+
+ diceImage.setImageResource(drawableResource)
+
     }
 }

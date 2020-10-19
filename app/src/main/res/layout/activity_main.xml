@@ -36,6 +36,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/otro" />
+        android:text="TIRANDO"
+        app:icon="@drawable/baseline_android_black_18dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"/>
+
+
+
 
 </LinearLayout>

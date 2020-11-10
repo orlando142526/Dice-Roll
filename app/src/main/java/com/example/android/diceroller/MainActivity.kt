@@ -17,6 +17,7 @@
 package com.example.android.diceroller
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -35,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener {
             rollDice()
+            //mención del objeto y luego a la funcion
+            MisCorutinas.salidaLog()
+            Log.d("mensajeCorutina", "desde la Activity")
         }
       //Con el R.id cambiamos la imagen que indicamos en el layout
         //contenedor imagen
